@@ -1,7 +1,41 @@
 END USER LICENSE AGREEMENT (EULA)
+Windows 11 Optimizer
 
-Please read this agreement carefully before installing or using the Windows 11 Optimizer app.
+IMPORTANT – READ CAREFULLY
 
-By installing or using this software, you agree to the terms and conditions described herein.
+This End User License Agreement ("Agreement") is a legal agreement between you (either an individual or a single entity) and the developer ("Licensor") of the Windows 11 Optimizer software ("Software"). By installing, copying, or otherwise using the Software, you agree to be bound by the terms of this Agreement.
 
-[Add your license terms here.]
+1. LICENSE GRANT
+The Licensor grants you a limited, non-exclusive, non-transferable, revocable license to install and use the Software solely for personal or internal business purposes, in accordance with the terms of this Agreement.
+
+2. RESTRICTIONS
+You may not:
+
+Reverse engineer, decompile, or disassemble the Software.
+
+Modify, adapt, translate, or create derivative works of the Software.
+
+Rent, lease, sell, sublicense, or otherwise transfer the Software to any third party.
+
+Remove or alter any proprietary notices or labels on the Software.
+
+3. OWNERSHIP
+The Software is licensed, not sold. The Licensor retains all rights, title, and interest in and to the Software, including all copyrights, trademarks, and other intellectual property rights.
+
+4. DISCLAIMER OF WARRANTIES
+The Software is provided “AS IS” without warranty of any kind. The Licensor disclaims all warranties, express or implied, including, but not limited to, implied warranties of merchantability and fitness for a particular purpose. The entire risk arising out of the use or performance of the Software remains with you.
+
+5. LIMITATION OF LIABILITY
+In no event shall the Licensor be liable for any damages whatsoever (including, without limitation, damages for loss of business profits, business interruption, loss of business information, or any other pecuniary loss) arising out of the use of or inability to use this Software, even if the Licensor has been advised of the possibility of such damages.
+
+6. TERMINATION
+This Agreement is effective until terminated. It will terminate automatically without notice from the Licensor if you fail to comply with any provision of this Agreement. Upon termination, you must destroy all copies of the Software.
+
+7. GOVERNING LAW
+This Agreement shall be governed by and construed in accordance with the laws of [Your State/Country], without regard to its conflict of law principles.
+
+8. ENTIRE AGREEMENT
+This Agreement constitutes the entire agreement between you and the Licensor regarding the Software and supersedes all prior and contemporaneous understandings.
+
+📌 If you do not agree to these terms, do not install or use the Software.
+
