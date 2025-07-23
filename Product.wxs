@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="*" Name="Windows 11 Optimizer" Language="1033" Version="1.0.0" Manufacturer="YourName" UpgradeCode="A1234567-B89C-4DEF-9012-3456789ABCDE">
+    <Package InstallerVersion="500" Compressed="yes" InstallScope="perMachine" />
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate />
+
+    <Feature Id="ProductFeature" Title="Windows 11 Optimizer" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+    </Feature>
+  </Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="Windows11Optimizer" />
+      </Directory>
+      <Directory Id="DesktopFolder" Name="Desktop" />
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="AppShortcutFolder" Name="Windows 11 Optimizer" />
+      </Directory>
+    </Directory>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      <Component Id="MainExe" Guid="B2345678-C90D-4EFA-8123-4567890BCDEF">
+        <File Id="MainExeFile" Source="dist\\main.exe" KeyPath="yes" />
+        <Shortcut Id="DesktopShortcut" Directory="DesktopFolder" Name="Windows 11 Optimizer" WorkingDirectory="INSTALLFOLDER" Icon="AppIcon.ico" Advertise="yes" Target="[INSTALLFOLDER]main.exe" />
+        <Shortcut Id="StartMenuShortcut" Directory="AppShortcutFolder" Name="Windows 11 Optimizer" WorkingDirectory="INSTALLFOLDER" Icon="AppIcon.ico" Advertise="yes" Target="[INSTALLFOLDER]main.exe" />
+        <RemoveFolder Id="RemoveAppShortcutFolder" Directory="AppShortcutFolder" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\\Windows11Optimizer" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+
+  <Fragment>
+    <Icon Id="AppIcon.ico" SourceFile="AppIcon.ico" />
+  </Fragment>
+
+  <UI>
+    <UIRef Id="WixUI_InstallDir" />
+    <UIRef Id="WixUI_ErrorProgressText" />
+    <Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="LicenseAgreementDlg">1</Publish>
+    <Publish Dialog="LicenseAgreementDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg">1</Publish>
+    <Publish Dialog="LicenseAgreementDlg" Control="Next" Event="NewDialog" Value="InstallDirDlg">LicenseAccepted = "1"</Publish>
+  </UI>
+  <WixVariable Id="WixUILicenseRtf" Value="license.rtf" />
+</Wix>
